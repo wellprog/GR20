@@ -41,7 +41,7 @@ class baseController {
 
     protected function Json($MODEL) {
         header('Content-Type: application/json');
-        return json_encode($MODEL);
+        echo json_encode($MODEL);
     }
 
     protected function Redirect($action = "", $controller = "") {
