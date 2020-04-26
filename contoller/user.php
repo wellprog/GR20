@@ -10,7 +10,8 @@ class userController extends baseController {
         $u = GetUser();
 
         return $this->Json([
-            "isLogin" => $u != null
+            "isLogin" => $u != null,
+            "user" => $u
         ]);
     }
 
