@@ -155,7 +155,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact_form">
-                        <form id="loginform" name="loginuser" novalidate="novalidate">
+                        <form name="loginuser" novalidate="novalidate">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
@@ -192,37 +192,35 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="contact_form">
-                        <div id="message"></div>
-                        <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                        <form name="sentMessage" novalidate="novalidate">
 							<div class="row">
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" id="name" type="email" placeholder="Email" required="required" data-validation-required-message="Заполните поле пароля">
+										<input name="email" class="form-control" type="email" placeholder="Email" required="required" data-validation-required-message="Заполните поле EMAIL">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" id="name" type="text" placeholder="Login" required="required" data-validation-required-message="Please enter your name.">
+										<input name="login" class="form-control" type="text" placeholder="Login" required="required" data-validation-required-message="Заполните логин">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Password" required="required" data-validation-required-message="Please enter your email address.">
+										<input name="password" class="form-control" type="password" placeholder="Password" required="required" data-validation-required-message="Заполните пароль">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="col-md-6">
 									<div class="form-group">
-										<input class="form-control" id="email" type="email" placeholder="Password" required="required" data-validation-required-message="Please enter your email address.">
+										<input name="password1" class="form-control" type="password" placeholder="Password" required="required" data-validation-required-message="Заполните пароль">
 										<p class="help-block text-danger"></p>
 									</div>
 								</div>
 								<div class="clearfix"></div>
 								<div class="col-lg-12 text-center">
-									<div id="success"></div>
-									<button id="sendMessageButton" class="sim-btn hvr-radial-in" data-text="Зайти" type="submit">Зайти</button>
+									<button id="register_button" class="sim-btn hvr-radial-in" data-text="Зайти" type="submit">Зайти</button>
 								</div>
 							</div>
 						</form>

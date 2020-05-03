@@ -39,5 +39,11 @@
             return false;
         });
 
+
+        $("#register_button").click(function() {
+            var form = $(this)[0].form;
+            debugger;
+        });
+
     }
 )(jQuery);
