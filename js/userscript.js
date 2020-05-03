@@ -66,5 +66,13 @@
             return false;
         });
 
+        $("#logout_button").click(function() {
+            $("/user/logout", function() {
+                alert("Досвидания");
+                window.location.href = window.location.href;
+            })
+            return false;
+        });
+
     }
 )(jQuery);
