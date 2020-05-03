@@ -42,7 +42,28 @@
 
         $("#register_button").click(function() {
             var form = $(this)[0].form;
-            debugger;
+            //Проверяем пароль
+            if (form["password"].value == "") {
+                alert("Заполните поле пароль");
+                return false;
+            }
+            //Проверка на точность пароля
+            if (form["password"].value != form["password1"].value) {
+                alert("Пароли не совпадают");
+                return false;
+            }
+
+            $.post("/user/register", $(form).serialize(), function(data) {
+                if (data.error != undefined) {
+                    alert(data.error);
+                    return;
+                }
+
+                alert("Добро пожаловать!");
+                window.location.href = window.location.href;
+            });
+
+            return false;
         });
 
     }
