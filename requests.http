@@ -1,0 +1,21 @@
+@BaseUrl = http://random.kikoriki.space
+
+
+#### IsLogin
+GET {{BaseUrl}}/user/islogin
+
+### Login
+POST {{BaseUrl}}/user/login
+Content-Type: application/x-www-form-urlencoded
+
+login=test&password=test
+
+
+### register
+POST {{BaseUrl}}/user/register
+Content-Type: application/x-www-form-urlencoded
+
+email=test1@test.com&login=test1&password=test1
+
+### LogOut
+GET {{BaseUrl}}/user/logout

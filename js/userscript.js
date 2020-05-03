@@ -12,6 +12,7 @@
                 $.get("/user/islogin", function(responce) {
                     if (responce.isLogin == false) {
                         alert("Пользователь не залогинен");
+                        return;
                     }
 
                     user = responce.user;
@@ -21,6 +22,11 @@
         }
 
         IsLogedIn();
+
+
+        $("#login_button").click(function() {
+            
+        });
 
     }
 )(jQuery);
