@@ -26,7 +26,17 @@
 
         $("#login_button").click(function() {
             var form = $(this)[0].form;
-            debugger;
+            $.post("/user/login", $(form).serialize(), function(data) {
+                if (data.error != undefined) {
+                    alert(data.error);
+                    return;
+                }
+
+                alert("Добро пожаловать!");
+                window.location.href = window.location.href;
+            });
+
+            return false;
         });
 
     }
