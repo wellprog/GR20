@@ -67,7 +67,7 @@
         });
 
         $("#logout_button").click(function() {
-            $("/user/logout", function() {
+            $.get("/user/logout", function() {
                 alert("Досвидания");
                 window.location.href = window.location.href;
             })
