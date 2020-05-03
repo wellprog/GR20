@@ -10,18 +10,26 @@
         function IsLogedIn() {
             if (user == null) {
                 $.get("/user/islogin", function(responce) {
-                    if (responce.isLogin == false) {
-                        alert("Пользователь не залогинен");
-                        return;
+                    if (responce.isLogin == true) {
+                        user = responce.user;
                     }
 
-                    user = responce.user;
-                    alert("УРА пользователь залогинен!");
+                    ShowHideLogin();
                 });
             }
         }
 
         IsLogedIn();
+
+        function ShowHideLogin() {
+            if (user == null) {
+                $(".logout").css("display", "none");
+                $(".login").css("display", "block");
+            } else {
+                $(".logout").css("display", "block");
+                $(".login").css("display", "none");
+            }
+        }
 
 
         $("#login_button").click(function() {
