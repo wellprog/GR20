@@ -19,3 +19,13 @@ email=test1@test.com&login=test1&password=test1
 
 ### LogOut
 GET {{BaseUrl}}/user/logout
+
+
+### All complements
+GET {{BaseUrl}}/complement/all
+
+### Add Complement
+POST {{BaseUrl}}/complement/add
+Content-Type: application/x-www-form-urlencoded
+
+title=test&name=test
