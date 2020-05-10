@@ -86,7 +86,7 @@
         $("#complement_add_button").click(function() {
             var form = $(this)[0].form;
 
-            $.post("/complement/add", form.serialize(), function(data) {
+            $.post("/complement/add", $(form).serialize(), function(data) {
                 if (data.error != undefined) {
                     alert(data.error);
                     return;
