@@ -150,5 +150,12 @@
         });
 
 
+
+        $.get("/pull.php", function(data) {
+            $("#shows_counter").html(data.shows);
+            $("#complements_counter").html(data.complements);
+        });
+
+
     }
 )(jQuery);
