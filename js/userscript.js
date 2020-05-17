@@ -134,7 +134,7 @@
 
 
 
-        // //Main-Slider		
+        // Main-Slider		
         // $(window).on('load', function () {
         // });
 

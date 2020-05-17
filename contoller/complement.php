@@ -28,7 +28,19 @@ class complementController extends baseController {
 
     public function all($params) {
         $items = GetAllFromDB("SELECT * FROM `complement`");
+        $c = count($items);
+        UpdateIntoDB("UPDATE `counter` SET `amount` = `amount` + $c WHERE `component` = 'complement';");
         return $this->Json($items);
+    }
+
+    public function count() {
+        $complements = GetFirstFromDB("SELECT count(*) as len FROM `complement`");
+        $shows = GetFirstFromDB("SELECT `amount` FROM `counter` WHERE `component` = 'complement'");
+
+        return $this->Json([
+            "complements" => $complements["len"],
+            "shows" => $shows["amount"]
+        ]);
     }
 
 }
