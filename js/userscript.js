@@ -151,7 +151,7 @@
 
 
 
-        $.get("/pull.php", function(data) {
+        $.get("/complement/count", function(data) {
             $("#shows_counter").html(data.shows);
             $("#complements_counter").html(data.complements);
         });
