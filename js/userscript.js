@@ -122,10 +122,10 @@
                 animateOut: 'fadeOut',
                 responsiveRefreshRate: 0,
                 onInitialized: function (event) {
-                    centerSlideImages(event);
+                    //centerSlideImages(event);
                 },
                 onResized: function (event) {
-                    centerSlideImages(event);
+                    //centerSlideImages(event);
                 },
             });
             
