@@ -178,11 +178,6 @@
             }, 30);
         }
     }
-    $(".counter-number, .stat_count_download").each(function() {
-        $(this).data('count', parseInt($(this).html(), 10));
-        $(this).html('0');
-        count($(this));
-    });
 
 	//NiceScroll	
 	$("body").niceScroll({
